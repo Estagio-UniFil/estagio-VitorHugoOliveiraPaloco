@@ -550,6 +550,7 @@ class ComposerStaticInit49fcc24d6d4b0535fcc77b7acaafefaa
     );
 
     public static $classMap = array (
+        'App\\Http\\Controllers\\AulaController' => __DIR__ . '/../..' . '/app/Http/Controllers/AulaController.php',
         'App\\Http\\Controllers\\Auth\\AuthenticatedSessionController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/AuthenticatedSessionController.php',
         'App\\Http\\Controllers\\Auth\\ConfirmablePasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ConfirmablePasswordController.php',
         'App\\Http\\Controllers\\Auth\\EmailVerificationNotificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/EmailVerificationNotificationController.php',
@@ -559,8 +560,11 @@ class ComposerStaticInit49fcc24d6d4b0535fcc77b7acaafefaa
         'App\\Http\\Controllers\\Auth\\RegisteredUserController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/RegisteredUserController.php',
         'App\\Http\\Controllers\\Auth\\VerifyEmailController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerifyEmailController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\MateriaController' => __DIR__ . '/../..' . '/app/Http/Controllers/MateriaController.php',
         'App\\Http\\Controllers\\Settings\\PasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Settings/PasswordController.php',
         'App\\Http\\Controllers\\Settings\\ProfileController' => __DIR__ . '/../..' . '/app/Http/Controllers/Settings/ProfileController.php',
+        'App\\Http\\Controllers\\SolicitacaoController' => __DIR__ . '/../..' . '/app/Http/Controllers/SolicitacaoController.php',
+        'App\\Http\\Controllers\\TurmaController' => __DIR__ . '/../..' . '/app/Http/Controllers/TurmaController.php',
         'App\\Http\\Controllers\\UserController' => __DIR__ . '/../..' . '/app/Http/Controllers/UserController.php',
         'App\\Http\\Middleware\\HandleAppearance' => __DIR__ . '/../..' . '/app/Http/Middleware/HandleAppearance.php',
         'App\\Http\\Middleware\\HandleInertiaRequests' => __DIR__ . '/../..' . '/app/Http/Middleware/HandleInertiaRequests.php',

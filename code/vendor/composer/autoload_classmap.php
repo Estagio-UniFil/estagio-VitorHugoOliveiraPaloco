@@ -6,6 +6,7 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Http\\Controllers\\AulaController' => $baseDir . '/app/Http/Controllers/AulaController.php',
     'App\\Http\\Controllers\\Auth\\AuthenticatedSessionController' => $baseDir . '/app/Http/Controllers/Auth/AuthenticatedSessionController.php',
     'App\\Http\\Controllers\\Auth\\ConfirmablePasswordController' => $baseDir . '/app/Http/Controllers/Auth/ConfirmablePasswordController.php',
     'App\\Http\\Controllers\\Auth\\EmailVerificationNotificationController' => $baseDir . '/app/Http/Controllers/Auth/EmailVerificationNotificationController.php',
@@ -15,8 +16,11 @@ return array(
     'App\\Http\\Controllers\\Auth\\RegisteredUserController' => $baseDir . '/app/Http/Controllers/Auth/RegisteredUserController.php',
     'App\\Http\\Controllers\\Auth\\VerifyEmailController' => $baseDir . '/app/Http/Controllers/Auth/VerifyEmailController.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
+    'App\\Http\\Controllers\\MateriaController' => $baseDir . '/app/Http/Controllers/MateriaController.php',
     'App\\Http\\Controllers\\Settings\\PasswordController' => $baseDir . '/app/Http/Controllers/Settings/PasswordController.php',
     'App\\Http\\Controllers\\Settings\\ProfileController' => $baseDir . '/app/Http/Controllers/Settings/ProfileController.php',
+    'App\\Http\\Controllers\\SolicitacaoController' => $baseDir . '/app/Http/Controllers/SolicitacaoController.php',
+    'App\\Http\\Controllers\\TurmaController' => $baseDir . '/app/Http/Controllers/TurmaController.php',
     'App\\Http\\Controllers\\UserController' => $baseDir . '/app/Http/Controllers/UserController.php',
     'App\\Http\\Middleware\\HandleAppearance' => $baseDir . '/app/Http/Middleware/HandleAppearance.php',
     'App\\Http\\Middleware\\HandleInertiaRequests' => $baseDir . '/app/Http/Middleware/HandleInertiaRequests.php',

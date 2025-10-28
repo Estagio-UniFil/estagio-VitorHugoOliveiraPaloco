@@ -23,7 +23,31 @@
 
 - [📚 Diagrama de Sequência](docs/casos_de_uso/Caso-de-uso-Gerenciar-Usuarios/Diagrama%20de%20Sequencia-Gerenciar-Usuarios.pdf)
 - [📄 Especificação Caso de Uso](docs/casos_de_uso/Caso-de-uso-Gerenciar-Usuarios/Especificacao%20Caso%20de%20Uso-Gerenciar-Usuarios.pdf)
-  
+
+### Caso de Uso Gerenciar Matérias
+
+- [📚 Diagrama de Sequência](docs/casos_de_uso/Caso-de-uso-Gerenciar-Materias/Diagrama%20de%20Sequencia-Gerenciar-Materias.pdf)
+- [📄 Especificação Caso de Uso](docs/casos_de_uso/Caso-de-uso-Gerenciar-Materias/Especificacao%20Caso%20de%20Uso-Gerenciar-Materias.pdf)
+
+### Caso de Uso Gerenciar Turmas
+
+- [📚 Diagrama de Sequência](docs/casos_de_uso/Caso-de-uso-Gerenciar-Turmas/Diagrama%20de%20Sequencia-Gerenciar-Turmas.pdf)
+- [📄 Especificação Caso de Uso](docs/casos_de_uso/Caso-de-uso-Gerenciar-Turmas/Especificacao%20Caso%20de%20Uso-Gerenciar-Turmas.pdf)
+
+### Caso de Uso Gerenciar Aulas
+
+- [📚 Diagrama de Sequência](docs/casos_de_uso/Caso-de-uso-Gerenciar-Aulas/Diagrama%20de%20Sequencia-Gerenciar-Aulas.pdf)
+- [📄 Especificação Caso de Uso](docs/casos_de_uso/Caso-de-uso-Gerenciar-Aulas/Especificacao%20Caso%20de%20Uso-Gerenciar-Aulas.pdf)
+
+### Caso de Uso Solicitar Mudanças
+
+- [📚 Diagrama de Sequência](docs/casos_de_uso/Caso-de-uso-Solicitar-Mudanca/Diagrama%20de%20Sequencia-Solicitar-Mudanca.pdf)
+- [📄 Especificação Caso de Uso](docs/casos_de_uso/Caso-de-uso-Solicitar-Mudanca/Especificacao%20Caso%20de%20Uso-Solicitar-Mudanca.pdf)
+
+### Caso de Uso Visualizar Aulas
+
+- [📚 Diagrama de Sequência](docs/casos_de_uso/Caso-de-uso-Visualizar-Aulas/Diagrama%20de%20Sequencia-Visualizar-Aulas.pdf)
+- [📄 Especificação Caso de Uso](docs/casos_de_uso/Caso-de-uso-Visualizar-Aulas/Especificacao%20Caso%20de%20Uso-Visualizar-Aulas.pdf)
 
 # 🚀 Estágio Supervisionado UniFil - Guia Ágil para Alunos
 Este repositório é um template no GitHub para que você possa criar seu próprio repositório de estágio supervisionado a partir dele. Para usá-lo:

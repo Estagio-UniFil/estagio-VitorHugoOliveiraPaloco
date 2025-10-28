@@ -23,7 +23,7 @@ defineProps<Props>();
 
 const breadcrumbItems: BreadcrumbItem[] = [
     {
-        title: 'Profile settings',
+        title: 'Configurações de perfil',
         href: edit().url,
     },
 ];
@@ -34,15 +34,15 @@ const user = page.props.auth.user;
 
 <template>
     <AppLayout :breadcrumbs="breadcrumbItems">
-        <Head title="Profile settings" />
+        <Head title="Configurações de perfil" />
 
         <SettingsLayout>
             <div class="flex flex-col space-y-6">
-                <HeadingSmall title="Profile information" description="Update your name and email address" />
+                <HeadingSmall title="Informações do perfil" description="Atualize seu nome e endereço de e-mail" />
 
                 <Form v-bind="ProfileController.update.form()" class="space-y-6" v-slot="{ errors, processing, recentlySuccessful }">
                     <div class="grid gap-2">
-                        <Label for="name">Name</Label>
+                        <Label for="name">Nome</Label>
                         <Input
                             id="name"
                             class="mt-1 block w-full"
@@ -56,7 +56,7 @@ const user = page.props.auth.user;
                     </div>
 
                     <div class="grid gap-2">
-                        <Label for="email">Email address</Label>
+                        <Label for="email">Email</Label>
                         <Input
                             id="email"
                             type="email"
@@ -88,7 +88,7 @@ const user = page.props.auth.user;
                     </div>
 
                     <div class="flex items-center gap-4">
-                        <Button :disabled="processing">Save</Button>
+                        <Button :disabled="processing">Salvar</Button>
 
                         <Transition
                             enter-active-class="transition ease-in-out"
@@ -96,7 +96,7 @@ const user = page.props.auth.user;
                             leave-active-class="transition ease-in-out"
                             leave-to-class="opacity-0"
                         >
-                            <p v-show="recentlySuccessful" class="text-sm text-neutral-600">Saved.</p>
+                            <p v-show="recentlySuccessful" class="text-sm text-neutral-600">Atualizado.</p>
                         </Transition>
                     </div>
                 </Form>
