@@ -4,37 +4,54 @@ import NavUser from '@/components/NavUser.vue';
 import { Sidebar, SidebarContent, SidebarFooter, SidebarHeader, SidebarMenu, SidebarMenuButton, SidebarMenuItem } from '@/components/ui/sidebar';
 import { dashboard, usuariosIndex, materiasIndex, turmasIndex, solicitacoesIndex } from '@/routes';
 import { type NavItem } from '@/types';
-import { Link } from '@inertiajs/vue3';
+import { Link, usePage } from '@inertiajs/vue3';
 import { BookOpen, Folder, LayoutGrid, Home, AlarmClock, BookText, Bell, User } from 'lucide-vue-next';
 import AppLogo from './AppLogo.vue';
+import { computed } from 'vue';
 
-const mainNavItems: NavItem[] = [
+const page = usePage();
+const accessibleRoutes = computed<string[]>(() => 
+    page.props.auth?.accessible_routes || []
+);
+
+const allNavItemsWithRoutes = [
     {
         title: 'Home',
         href: dashboard(),
         icon: Home,
+        routeName: 'dashboard',
     },
     {
         title: 'Turmas',
         href: turmasIndex(),
         icon: AlarmClock,
+        routeName: 'turmasIndex',
     },
     {
         title: 'Matérias',
         href: materiasIndex(),
         icon: BookText,
+        routeName: 'materiasIndex',
     },
     {
         title: 'Solicitações',
         href: solicitacoesIndex(),
         icon: Bell,
+        routeName: 'solicitacoesIndex',
     },
     {
         title: 'Usuários',
         href: usuariosIndex(), 
         icon: User,
+        routeName: 'usuariosIndex',
     }
 ];
+
+const mainNavItems = computed<NavItem[]>(() => {
+    return allNavItemsWithRoutes.filter(item => 
+        accessibleRoutes.value.includes(item.routeName)
+    );
+});
 
 const footerNavItems: NavItem[] = [
     {

@@ -47,11 +47,6 @@ class User extends Authenticatable
         return $this->hasOne(Professor::class)->withTrashed();
     }
 
-    public function acesso($rota)
-    {
-        return $this->role->rotas->contains('rota', $rota);
-    }
-
     public static function matricula_info($matricula)
     {
         $ano = Str::of($matricula)->substr(0, 2);
@@ -59,5 +54,15 @@ class User extends Authenticatable
         $codigo_curso = Str::of($matricula)->substr(3, 3);
 
         return $ano . $entrada . $codigo_curso;
+    }
+
+    public function acesso($rota)
+    {
+        return $this->role->rotas->contains('rota', $rota);
+    }
+
+    public function listarRotas()
+    {
+        return $this->role->rotas->pluck('rota')->toArray();
     }
 }

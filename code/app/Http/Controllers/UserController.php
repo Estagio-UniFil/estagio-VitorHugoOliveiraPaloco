@@ -78,7 +78,7 @@ class UserController extends Controller
 
         // Dependendo do role, cria registros relacionados
         if ($user->role_id == 1) {
-            $codigoEntrada = $user->matricula_info();
+            $codigoEntrada = $user->matricula_info($input['matricula']);
             $turma = Turma::whereJsonContains('codigo_entradas', $codigoEntrada)->first();
 
             if (!$turma) {

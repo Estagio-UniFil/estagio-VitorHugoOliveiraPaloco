@@ -14,22 +14,32 @@ class RotaSeeder extends Seeder
     public function run(): void
     {
         DB::table('rotas')->insert([
-            ['rota' => 'home'],
+            ['rota' => 'dashboard'],
 
-            ['rota' => 'usuarios.index'],
-            ['rota' => 'usuarios.store'],
-            ['rota' => 'usuarios.update'],
-            ['rota' => 'usuarios.destroy'],
+            ['rota' => 'usuariosIndex'],
+            ['rota' => 'usuariosStore'],
+            ['rota' => 'usuariosUpdate'],
+            ['rota' => 'usuariosDestroy'],
 
-            ['rota' => 'materias.index'],
-            ['rota' => 'materias.store'],
-            ['rora' => 'materias.update'],
-            ['rota' => 'materias.destroy'],
+            ['rota' => 'materiasIndex'],
+            ['rota' => 'materiasStore'],
+            ['rora' => 'materiasUpdate'],
+            ['rota' => 'materiasDestroy'],
 
-            ['rota' => 'solicitacoes.index'],
-            ['rota' => 'solicitacoes.store'],
-            ['rota' => 'solicitacoes.update'],
-            ['rota' => 'solicitacoes.destroy'],
+            ['rota' => 'solicitacoesIndex'],
+            ['rota' => 'solicitacoesStore'],
+            ['rota' => 'solicitacoesUpdate'],
+            ['rota' => 'solicitacoesDestroy'],
+
+            ['rota' => 'turmasIndex'],
+            ['rota' => 'turmasStore'],
+            ['rota' => 'turmasUpdate'],
+            ['rota' => 'turmasDestroy'],
+            ['rota' => 'turmasShow'],
+
+            ['rota' => 'aulasStore'],
+            ['rota' => 'aulasUpdate'],
+            ['rota' => 'aulasDestroy']
         ]);
 
         DB::table('roles_rotas')->insert([
@@ -51,7 +61,16 @@ class RotaSeeder extends Seeder
             ['role_id' => 3, 'rota_id' => 11],
             ['role_id' => 3, 'rota_id' => 12],
             ['role_id' => 3, 'rota_id' => 13],
-            
+
+            ['role_id' => 3, 'rota_id' => 14],
+            ['role_id' => 3, 'rota_id' => 15],
+            ['role_id' => 3, 'rota_id' => 16],
+            ['role_id' => 3, 'rota_id' => 17],
+            ['role_id' => 3, 'rota_id' => 18],
+
+            ['role_id' => 3, 'rota_id' => 19],
+            ['role_id' => 3, 'rota_id' => 20],
+            ['role_id' => 3, 'rota_id' => 21]
         ]);
     }
 }
