@@ -30,7 +30,7 @@
 ### Caso de Uso Gerenciar Matérias
 
 - [📚 Diagrama de Sequência](docs/casos_de_uso/gerenciar-materias/diagrama-sequencia-gerenciar-materias.pdf)
-- [📄 Especificação Caso de Uso](docs/casos_de_uso/Caso-de-uso-Gerenciar-Materias/especificacao-gerenciar-materias.pdf)
+- [📄 Especificação Caso de Uso](docs/casos_de_uso/gerenciar-materias/especificacao-gerenciar-materias.pdf)
 
 ### Caso de Uso Gerenciar Turmas
 
