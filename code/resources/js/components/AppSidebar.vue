@@ -2,16 +2,17 @@
 import NavMain from '@/components/NavMain.vue';
 import NavUser from '@/components/NavUser.vue';
 import { Sidebar, SidebarContent, SidebarFooter, SidebarHeader, SidebarMenu, SidebarMenuButton, SidebarMenuItem } from '@/components/ui/sidebar';
-import { dashboard, usuariosIndex, materiasIndex, turmasIndex, solicitacoesIndex } from '@/routes';
+import { dashboard, usuariosIndex, materiasIndex, turmasIndex, solicitacoesIndex, minhasAulas } from '@/routes';
 import { type NavItem } from '@/types';
 import { Link, usePage } from '@inertiajs/vue3';
-import { BookOpen, Folder, LayoutGrid, Home, AlarmClock, BookText, Bell, User } from 'lucide-vue-next';
+import { BookOpen, Folder, LayoutGrid, Home, AlarmClock, BookText, Bell, User, BookCopy } from 'lucide-vue-next';
 import AppLogo from './AppLogo.vue';
 import { computed } from 'vue';
 
 const page = usePage();
+
 const accessibleRoutes = computed<string[]>(() => 
-    page.props.auth?.accessible_routes || []
+    page.props.auth?.rotas_com_acesso || [] // HandleInertiaRequests.php
 );
 
 const allNavItemsWithRoutes = [
@@ -20,6 +21,12 @@ const allNavItemsWithRoutes = [
         href: dashboard(),
         icon: Home,
         routeName: 'dashboard',
+    },
+    {
+        title: 'Minhas aulas',
+        href: minhasAulas(),
+        icon: BookCopy,
+        routeName: 'minhasAulas',
     },
     {
         title: 'Turmas',

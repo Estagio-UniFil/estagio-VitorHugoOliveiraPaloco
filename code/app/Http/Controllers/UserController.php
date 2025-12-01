@@ -19,12 +19,11 @@ class UserController extends Controller
 {
     private function validateUser(array $input, $ignoreId = null) {
         return Validator::make($input, [
-            'name' => ['required', 'string', 'max:255', Rule::unique(User::class)->whereNull('deleted_at')->ignore($ignoreId)],
+            'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:100', 'regex:/@(?:edu\.)?unifil\.br$/i', Rule::unique(User::class)->whereNull('deleted_at')->ignore($ignoreId)],
             'matricula' => ['required', 'string', 'min:9', 'max:9', Rule::unique(User::class)->whereNull('deleted_at')->ignore($ignoreId)],
             'role_id' => ['required']
         ], [
-            'name.unique' => 'Já existe um usuário com este nome',
             'email.unique' => 'Já existe um usuário com este e-mail',
             'email.regex' => 'O e-mail deve ser de domínio Unifil',
             'matricula.unique' => 'Já existe um usuário com esta matrícula',

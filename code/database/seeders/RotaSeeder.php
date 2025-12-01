@@ -39,7 +39,9 @@ class RotaSeeder extends Seeder
 
             ['rota' => 'aulasStore'],
             ['rota' => 'aulasUpdate'],
-            ['rota' => 'aulasDestroy']
+            ['rota' => 'aulasDestroy'],
+
+            ['rota' => 'minhasAulas']
         ]);
 
         DB::table('roles_rotas')->insert([
@@ -70,7 +72,15 @@ class RotaSeeder extends Seeder
 
             ['role_id' => 3, 'rota_id' => 19],
             ['role_id' => 3, 'rota_id' => 20],
-            ['role_id' => 3, 'rota_id' => 21]
+            ['role_id' => 3, 'rota_id' => 21],
+
+            ['role_id' => 1, 'rota_id' => 22],
+            ['role_id' => 2, 'rota_id' => 22],
+            ['role_id' => 3, 'rota_id' => 22],
+
+            ['role_id' => 2, 'rota_id' => 10],
+            ['role_id' => 2, 'rota_id' => 11]
+
         ]);
     }
 }

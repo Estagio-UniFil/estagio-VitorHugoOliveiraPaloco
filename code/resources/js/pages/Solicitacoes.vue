@@ -25,7 +25,8 @@ const props = defineProps<{
     status: string
     professor: { user: { name: string } }
     professor_id: string
-  }>
+  }>,
+  role_id: number
 }>()
 
 // Dados da tabela
@@ -113,7 +114,7 @@ function editSolicitacao(row: any) {
       @edit="editSolicitacao"
     >
       <template #actions="{ row, openModal }">
-        <TableDropDown
+        <TableDropDown v-if="role_id === 3"
           :row="row"
           @delete="deleteSolicitacao(row.id)"
           @edit="openModal"
@@ -124,6 +125,7 @@ function editSolicitacao(row: any) {
         <SolicitacaoForm
           :form="form"
           :onSubmit="saveSolicitacao"
+          :role_id="role_id"
         />
       </template>
     </DataTable>

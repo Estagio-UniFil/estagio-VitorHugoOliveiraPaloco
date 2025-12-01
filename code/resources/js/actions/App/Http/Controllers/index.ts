@@ -1,3 +1,4 @@
+import HomeController from './HomeController'
 import UserController from './UserController'
 import MateriaController from './MateriaController'
 import TurmaController from './TurmaController'
@@ -7,6 +8,7 @@ import Settings from './Settings'
 import Auth from './Auth'
 
 const Controllers = {
+    HomeController,
     UserController,
     MateriaController,
     TurmaController,

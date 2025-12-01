@@ -112,6 +112,7 @@ function deleteTurma() {
             :turma-id="props.turma.id"
             :materias="props.materias"
             :professores="props.professores"
+            :botoes="true"
           />
         </template>
       </div>
@@ -125,6 +126,7 @@ function deleteTurma() {
           :turma-id="props.turma.id"
           :materias="props.materias"
           :professores="props.professores"
+          :botoes="true"
         />
         <ClassCard
           dia="contra_turno"
@@ -133,6 +135,7 @@ function deleteTurma() {
           :turma-id="props.turma.id"
           :materias="props.materias"
           :professores="props.professores"
+          :botoes="true"
         />
       </div>
     </div>

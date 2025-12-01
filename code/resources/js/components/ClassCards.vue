@@ -49,6 +49,7 @@ const props = defineProps<{
   }
   materias: Array<{ id: number; nome: string }>
   professores: Array<{ id: number; nome: string }>
+  botoes: boolean
 }>()
 
 const isCreateOpen = ref(false)
@@ -123,14 +124,13 @@ function openEditDialog() {
   <div class="rounded-xl bg-muted/50 text-card-foreground shadow-md h-auto min-h-[10rem] flex flex-col justify-center">
     <!-- Caso ainda não exista aula -->
     <Dialog v-if="!props.aula" v-model:open="isCreateOpen">
-     <DialogTrigger as-child>
+     <DialogTrigger v-if="props.botoes" as-child>
         <div class="flex justify-center">
           <Button class="bg-[#F29400] text-white rounded-xl capitalize">
             + {{ props.dia }} ({{ props.turno }})
           </Button>
         </div>
       </DialogTrigger>
-
 
       <DialogContent class="sm:max-w-[425px]">
         <DialogHeader>
@@ -146,6 +146,10 @@ function openEditDialog() {
           :professores="props.professores"
         />
       </DialogContent>
+
+      <div v-if="!props.botoes" class="flex justify-center items-center h-full py-8 text-muted-foreground italic">
+        Sem aula
+      </div>
     </Dialog>
 
     <!-- Caso já exista aula -->
@@ -173,10 +177,10 @@ function openEditDialog() {
         </div>
       </div>
 
-      <Separator />
+      <Separator v-if="props.botoes"/>
 
-      <div class="flex justify-center gap-3 p-3">
-        <Dialog v-model:open="isEditOpen">
+      <div v-if="props.botoes" class="flex justify-center gap-3 p-3">
+        <Dialog v-if="props.botoes" v-model:open="isEditOpen">
           <DialogTrigger as-child>
             <Button variant="outline" @click.stop="openEditDialog">
               <SquarePen class="w-4 h-4" /> Editar

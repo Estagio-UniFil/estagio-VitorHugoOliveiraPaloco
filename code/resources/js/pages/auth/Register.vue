@@ -12,7 +12,7 @@ import { LoaderCircle } from 'lucide-vue-next';
 </script>
 
 <template>
-    <AuthBase title="Create an account" description="Enter your details below to create your account">
+    <AuthBase title="Criar sua conta" description="Insira as informações abaixo para criar sua conta. Se você é um professor, entre em contato com o administrador para criar sua conta.">
         <Head title="Register" />
 
         <Form
@@ -23,46 +23,52 @@ import { LoaderCircle } from 'lucide-vue-next';
         >
             <div class="grid gap-6">
                 <div class="grid gap-2">
-                    <Label for="name">Name</Label>
-                    <Input id="name" type="text" required autofocus :tabindex="1" autocomplete="name" name="name" placeholder="Full name" />
+                    <Label for="name">Nome</Label>
+                    <Input id="name" type="text" required autofocus :tabindex="1" autocomplete="name" name="name" placeholder="Nome completo" />
                     <InputError :message="errors.name" />
                 </div>
 
                 <div class="grid gap-2">
-                    <Label for="email">Email address</Label>
-                    <Input id="email" type="email" required :tabindex="2" autocomplete="email" name="email" placeholder="email@example.com" />
+                    <Label for="email">Email</Label>
+                    <Input id="email" type="email" required :tabindex="2" autocomplete="email" name="email" placeholder="exemplo@edu.unifil.br" />
                     <InputError :message="errors.email" />
                 </div>
 
                 <div class="grid gap-2">
-                    <Label for="password">Password</Label>
-                    <Input id="password" type="password" required :tabindex="3" autocomplete="new-password" name="password" placeholder="Password" />
+                    <Label for="matricula">Matrícula</Label>
+                    <Input id="matricula" type="text" required :tabindex="3" autocomplete="matricula" name="matricula" placeholder="251072100" />
+                    <InputError :message="errors.matricula" />
+                </div>
+
+                <div class="grid gap-2">
+                    <Label for="password">Senha</Label>
+                    <Input id="password" type="password" required :tabindex="4" autocomplete="new-password" name="password" placeholder="Senha" />
                     <InputError :message="errors.password" />
                 </div>
 
                 <div class="grid gap-2">
-                    <Label for="password_confirmation">Confirm password</Label>
+                    <Label for="password_confirmation">Confirmar senha</Label>
                     <Input
                         id="password_confirmation"
                         type="password"
                         required
-                        :tabindex="4"
+                        :tabindex="5"
                         autocomplete="new-password"
                         name="password_confirmation"
-                        placeholder="Confirm password"
+                        placeholder="Confirmar senha"
                     />
                     <InputError :message="errors.password_confirmation" />
                 </div>
 
-                <Button type="submit" class="mt-2 w-full" tabindex="5" :disabled="processing">
+                <Button type="submit" class="mt-2 w-full" tabindex="6" :disabled="processing">
                     <LoaderCircle v-if="processing" class="h-4 w-4 animate-spin" />
-                    Create account
+                    Criar conta
                 </Button>
             </div>
 
             <div class="text-center text-sm text-muted-foreground">
-                Already have an account?
-                <TextLink :href="login()" class="underline underline-offset-4" :tabindex="6">Log in</TextLink>
+                Já possui uma conta?
+                <TextLink :href="login()" class="underline underline-offset-4" :tabindex="6">Login</TextLink>
             </div>
         </Form>
     </AuthBase>

@@ -37,8 +37,19 @@ class SolicitacaoController extends Controller
 
 
     public function index() {
+        $usuario = auth()->user();
         $lista_solicitacoes = Solicitacao::with('professor.user:id,name')->get();
-        return Inertia::render('Solicitacoes', ['lista_solicitacoes' => $lista_solicitacoes]);
+
+        switch ($usuario->role_id) {
+            case 2:
+                $lista_solicitacoes = Solicitacao::where('professor_id', $usuario->professor->id)->with('professor.user:id,name')->get();
+                break;
+            case 3:
+                $lista_solicitacoes = Solicitacao::with('professor.user:id,name')->get();
+                break;
+        }
+
+        return Inertia::render('Solicitacoes', ['lista_solicitacoes' => $lista_solicitacoes, 'role_id' => $usuario->role_id]);
     }
 
 

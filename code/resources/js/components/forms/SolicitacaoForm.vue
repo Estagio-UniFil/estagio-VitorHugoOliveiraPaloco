@@ -23,6 +23,7 @@ interface FormData {
 const props = defineProps<{
   form: FormData
   onSubmit: () => void
+  role_id: number
 }>()
 </script>
 
@@ -31,7 +32,7 @@ const props = defineProps<{
     <!-- Status -->
     <div class="space-y-2">
       <label class="text-sm font-medium">Status</label>
-      <Select v-model="props.form.status">
+      <Select v-model="props.form.status" :disabled="props.role_id !== 3">
         <SelectTrigger>
           <SelectValue placeholder="Selecione o Status" />
         </SelectTrigger>

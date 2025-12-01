@@ -1,6 +1,6 @@
 import { queryParams, type RouteQueryOptions, type RouteDefinition, type RouteFormDefinition, applyUrlDefaults } from './../wayfinder'
 /**
-* @see routes/web.php:13
+* @see [serialized-closure]:2
 * @route '/'
 */
 export const home = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -14,7 +14,7 @@ home.definition = {
 } satisfies RouteDefinition<["get","head"]>
 
 /**
-* @see routes/web.php:13
+* @see [serialized-closure]:2
 * @route '/'
 */
 home.url = (options?: RouteQueryOptions) => {
@@ -22,7 +22,7 @@ home.url = (options?: RouteQueryOptions) => {
 }
 
 /**
-* @see routes/web.php:13
+* @see [serialized-closure]:2
 * @route '/'
 */
 home.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -31,7 +31,7 @@ home.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 })
 
 /**
-* @see routes/web.php:13
+* @see [serialized-closure]:2
 * @route '/'
 */
 home.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -40,7 +40,7 @@ home.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 })
 
 /**
-* @see routes/web.php:13
+* @see [serialized-closure]:2
 * @route '/'
 */
 const homeForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -49,7 +49,7 @@ const homeForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
 })
 
 /**
-* @see routes/web.php:13
+* @see [serialized-closure]:2
 * @route '/'
 */
 homeForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -58,7 +58,7 @@ homeForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
 })
 
 /**
-* @see routes/web.php:13
+* @see [serialized-closure]:2
 * @route '/'
 */
 homeForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -74,7 +74,7 @@ homeForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
 home.form = homeForm
 
 /**
-* @see routes/web.php:18
+* @see [serialized-closure]:2
 * @route '/dashboard'
 */
 export const dashboard = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -88,7 +88,7 @@ dashboard.definition = {
 } satisfies RouteDefinition<["get","head"]>
 
 /**
-* @see routes/web.php:18
+* @see [serialized-closure]:2
 * @route '/dashboard'
 */
 dashboard.url = (options?: RouteQueryOptions) => {
@@ -96,7 +96,7 @@ dashboard.url = (options?: RouteQueryOptions) => {
 }
 
 /**
-* @see routes/web.php:18
+* @see [serialized-closure]:2
 * @route '/dashboard'
 */
 dashboard.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -105,7 +105,7 @@ dashboard.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 })
 
 /**
-* @see routes/web.php:18
+* @see [serialized-closure]:2
 * @route '/dashboard'
 */
 dashboard.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -114,7 +114,7 @@ dashboard.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 })
 
 /**
-* @see routes/web.php:18
+* @see [serialized-closure]:2
 * @route '/dashboard'
 */
 const dashboardForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -123,7 +123,7 @@ const dashboardForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> 
 })
 
 /**
-* @see routes/web.php:18
+* @see [serialized-closure]:2
 * @route '/dashboard'
 */
 dashboardForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -132,7 +132,7 @@ dashboardForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> =>
 })
 
 /**
-* @see routes/web.php:18
+* @see [serialized-closure]:2
 * @route '/dashboard'
 */
 dashboardForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -148,8 +148,89 @@ dashboardForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> =
 dashboard.form = dashboardForm
 
 /**
+* @see \App\Http\Controllers\HomeController::minhasAulas
+* @see app/Http/Controllers/HomeController.php:14
+* @route '/minhas_aulas'
+*/
+export const minhasAulas = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+    url: minhasAulas.url(options),
+    method: 'get',
+})
+
+minhasAulas.definition = {
+    methods: ["get","head"],
+    url: '/minhas_aulas',
+} satisfies RouteDefinition<["get","head"]>
+
+/**
+* @see \App\Http\Controllers\HomeController::minhasAulas
+* @see app/Http/Controllers/HomeController.php:14
+* @route '/minhas_aulas'
+*/
+minhasAulas.url = (options?: RouteQueryOptions) => {
+    return minhasAulas.definition.url + queryParams(options)
+}
+
+/**
+* @see \App\Http\Controllers\HomeController::minhasAulas
+* @see app/Http/Controllers/HomeController.php:14
+* @route '/minhas_aulas'
+*/
+minhasAulas.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+    url: minhasAulas.url(options),
+    method: 'get',
+})
+
+/**
+* @see \App\Http\Controllers\HomeController::minhasAulas
+* @see app/Http/Controllers/HomeController.php:14
+* @route '/minhas_aulas'
+*/
+minhasAulas.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
+    url: minhasAulas.url(options),
+    method: 'head',
+})
+
+/**
+* @see \App\Http\Controllers\HomeController::minhasAulas
+* @see app/Http/Controllers/HomeController.php:14
+* @route '/minhas_aulas'
+*/
+const minhasAulasForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+    action: minhasAulas.url(options),
+    method: 'get',
+})
+
+/**
+* @see \App\Http\Controllers\HomeController::minhasAulas
+* @see app/Http/Controllers/HomeController.php:14
+* @route '/minhas_aulas'
+*/
+minhasAulasForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+    action: minhasAulas.url(options),
+    method: 'get',
+})
+
+/**
+* @see \App\Http\Controllers\HomeController::minhasAulas
+* @see app/Http/Controllers/HomeController.php:14
+* @route '/minhas_aulas'
+*/
+minhasAulasForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
+    action: minhasAulas.url({
+        [options?.mergeQuery ? 'mergeQuery' : 'query']: {
+            _method: 'HEAD',
+            ...(options?.query ?? options?.mergeQuery ?? {}),
+        }
+    }),
+    method: 'get',
+})
+
+minhasAulas.form = minhasAulasForm
+
+/**
 * @see \App\Http\Controllers\UserController::usuariosIndex
-* @see app/Http/Controllers/UserController.php:40
+* @see app/Http/Controllers/UserController.php:39
 * @route '/usuarios'
 */
 export const usuariosIndex = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -164,7 +245,7 @@ usuariosIndex.definition = {
 
 /**
 * @see \App\Http\Controllers\UserController::usuariosIndex
-* @see app/Http/Controllers/UserController.php:40
+* @see app/Http/Controllers/UserController.php:39
 * @route '/usuarios'
 */
 usuariosIndex.url = (options?: RouteQueryOptions) => {
@@ -173,7 +254,7 @@ usuariosIndex.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\UserController::usuariosIndex
-* @see app/Http/Controllers/UserController.php:40
+* @see app/Http/Controllers/UserController.php:39
 * @route '/usuarios'
 */
 usuariosIndex.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -183,7 +264,7 @@ usuariosIndex.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 
 /**
 * @see \App\Http\Controllers\UserController::usuariosIndex
-* @see app/Http/Controllers/UserController.php:40
+* @see app/Http/Controllers/UserController.php:39
 * @route '/usuarios'
 */
 usuariosIndex.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -193,7 +274,7 @@ usuariosIndex.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => (
 
 /**
 * @see \App\Http\Controllers\UserController::usuariosIndex
-* @see app/Http/Controllers/UserController.php:40
+* @see app/Http/Controllers/UserController.php:39
 * @route '/usuarios'
 */
 const usuariosIndexForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -203,7 +284,7 @@ const usuariosIndexForm = (options?: RouteQueryOptions): RouteFormDefinition<'ge
 
 /**
 * @see \App\Http\Controllers\UserController::usuariosIndex
-* @see app/Http/Controllers/UserController.php:40
+* @see app/Http/Controllers/UserController.php:39
 * @route '/usuarios'
 */
 usuariosIndexForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -213,7 +294,7 @@ usuariosIndexForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'
 
 /**
 * @see \App\Http\Controllers\UserController::usuariosIndex
-* @see app/Http/Controllers/UserController.php:40
+* @see app/Http/Controllers/UserController.php:39
 * @route '/usuarios'
 */
 usuariosIndexForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -230,7 +311,7 @@ usuariosIndex.form = usuariosIndexForm
 
 /**
 * @see \App\Http\Controllers\UserController::usuariosStore
-* @see app/Http/Controllers/UserController.php:45
+* @see app/Http/Controllers/UserController.php:44
 * @route '/usuarios'
 */
 export const usuariosStore = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
@@ -245,7 +326,7 @@ usuariosStore.definition = {
 
 /**
 * @see \App\Http\Controllers\UserController::usuariosStore
-* @see app/Http/Controllers/UserController.php:45
+* @see app/Http/Controllers/UserController.php:44
 * @route '/usuarios'
 */
 usuariosStore.url = (options?: RouteQueryOptions) => {
@@ -254,7 +335,7 @@ usuariosStore.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\UserController::usuariosStore
-* @see app/Http/Controllers/UserController.php:45
+* @see app/Http/Controllers/UserController.php:44
 * @route '/usuarios'
 */
 usuariosStore.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
@@ -264,7 +345,7 @@ usuariosStore.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => (
 
 /**
 * @see \App\Http\Controllers\UserController::usuariosStore
-* @see app/Http/Controllers/UserController.php:45
+* @see app/Http/Controllers/UserController.php:44
 * @route '/usuarios'
 */
 const usuariosStoreForm = (options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -274,7 +355,7 @@ const usuariosStoreForm = (options?: RouteQueryOptions): RouteFormDefinition<'po
 
 /**
 * @see \App\Http\Controllers\UserController::usuariosStore
-* @see app/Http/Controllers/UserController.php:45
+* @see app/Http/Controllers/UserController.php:44
 * @route '/usuarios'
 */
 usuariosStoreForm.post = (options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -286,7 +367,7 @@ usuariosStore.form = usuariosStoreForm
 
 /**
 * @see \App\Http\Controllers\UserController::usuariosUpdate
-* @see app/Http/Controllers/UserController.php:115
+* @see app/Http/Controllers/UserController.php:114
 * @route '/usuarios/{usuario}'
 */
 export const usuariosUpdate = (args: { usuario: number | { id: number } } | [usuario: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'put'> => ({
@@ -301,7 +382,7 @@ usuariosUpdate.definition = {
 
 /**
 * @see \App\Http\Controllers\UserController::usuariosUpdate
-* @see app/Http/Controllers/UserController.php:115
+* @see app/Http/Controllers/UserController.php:114
 * @route '/usuarios/{usuario}'
 */
 usuariosUpdate.url = (args: { usuario: number | { id: number } } | [usuario: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions) => {
@@ -334,7 +415,7 @@ usuariosUpdate.url = (args: { usuario: number | { id: number } } | [usuario: num
 
 /**
 * @see \App\Http\Controllers\UserController::usuariosUpdate
-* @see app/Http/Controllers/UserController.php:115
+* @see app/Http/Controllers/UserController.php:114
 * @route '/usuarios/{usuario}'
 */
 usuariosUpdate.put = (args: { usuario: number | { id: number } } | [usuario: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'put'> => ({
@@ -344,7 +425,7 @@ usuariosUpdate.put = (args: { usuario: number | { id: number } } | [usuario: num
 
 /**
 * @see \App\Http\Controllers\UserController::usuariosUpdate
-* @see app/Http/Controllers/UserController.php:115
+* @see app/Http/Controllers/UserController.php:114
 * @route '/usuarios/{usuario}'
 */
 const usuariosUpdateForm = (args: { usuario: number | { id: number } } | [usuario: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -359,7 +440,7 @@ const usuariosUpdateForm = (args: { usuario: number | { id: number } } | [usuari
 
 /**
 * @see \App\Http\Controllers\UserController::usuariosUpdate
-* @see app/Http/Controllers/UserController.php:115
+* @see app/Http/Controllers/UserController.php:114
 * @route '/usuarios/{usuario}'
 */
 usuariosUpdateForm.put = (args: { usuario: number | { id: number } } | [usuario: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -376,7 +457,7 @@ usuariosUpdate.form = usuariosUpdateForm
 
 /**
 * @see \App\Http\Controllers\UserController::usuariosDestroy
-* @see app/Http/Controllers/UserController.php:101
+* @see app/Http/Controllers/UserController.php:100
 * @route '/usuarios/{usuario}'
 */
 export const usuariosDestroy = (args: { usuario: number | { id: number } } | [usuario: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'delete'> => ({
@@ -391,7 +472,7 @@ usuariosDestroy.definition = {
 
 /**
 * @see \App\Http\Controllers\UserController::usuariosDestroy
-* @see app/Http/Controllers/UserController.php:101
+* @see app/Http/Controllers/UserController.php:100
 * @route '/usuarios/{usuario}'
 */
 usuariosDestroy.url = (args: { usuario: number | { id: number } } | [usuario: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions) => {
@@ -424,7 +505,7 @@ usuariosDestroy.url = (args: { usuario: number | { id: number } } | [usuario: nu
 
 /**
 * @see \App\Http\Controllers\UserController::usuariosDestroy
-* @see app/Http/Controllers/UserController.php:101
+* @see app/Http/Controllers/UserController.php:100
 * @route '/usuarios/{usuario}'
 */
 usuariosDestroy.delete = (args: { usuario: number | { id: number } } | [usuario: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'delete'> => ({
@@ -434,7 +515,7 @@ usuariosDestroy.delete = (args: { usuario: number | { id: number } } | [usuario:
 
 /**
 * @see \App\Http\Controllers\UserController::usuariosDestroy
-* @see app/Http/Controllers/UserController.php:101
+* @see app/Http/Controllers/UserController.php:100
 * @route '/usuarios/{usuario}'
 */
 const usuariosDestroyForm = (args: { usuario: number | { id: number } } | [usuario: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -449,7 +530,7 @@ const usuariosDestroyForm = (args: { usuario: number | { id: number } } | [usuar
 
 /**
 * @see \App\Http\Controllers\UserController::usuariosDestroy
-* @see app/Http/Controllers/UserController.php:101
+* @see app/Http/Controllers/UserController.php:100
 * @route '/usuarios/{usuario}'
 */
 usuariosDestroyForm.delete = (args: { usuario: number | { id: number } } | [usuario: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -1536,7 +1617,7 @@ solicitacoesIndex.form = solicitacoesIndexForm
 
 /**
 * @see \App\Http\Controllers\SolicitacaoController::solicitacoesStore
-* @see app/Http/Controllers/SolicitacaoController.php:45
+* @see app/Http/Controllers/SolicitacaoController.php:56
 * @route '/solicitacoes'
 */
 export const solicitacoesStore = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
@@ -1551,7 +1632,7 @@ solicitacoesStore.definition = {
 
 /**
 * @see \App\Http\Controllers\SolicitacaoController::solicitacoesStore
-* @see app/Http/Controllers/SolicitacaoController.php:45
+* @see app/Http/Controllers/SolicitacaoController.php:56
 * @route '/solicitacoes'
 */
 solicitacoesStore.url = (options?: RouteQueryOptions) => {
@@ -1560,7 +1641,7 @@ solicitacoesStore.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\SolicitacaoController::solicitacoesStore
-* @see app/Http/Controllers/SolicitacaoController.php:45
+* @see app/Http/Controllers/SolicitacaoController.php:56
 * @route '/solicitacoes'
 */
 solicitacoesStore.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
@@ -1570,7 +1651,7 @@ solicitacoesStore.post = (options?: RouteQueryOptions): RouteDefinition<'post'> 
 
 /**
 * @see \App\Http\Controllers\SolicitacaoController::solicitacoesStore
-* @see app/Http/Controllers/SolicitacaoController.php:45
+* @see app/Http/Controllers/SolicitacaoController.php:56
 * @route '/solicitacoes'
 */
 const solicitacoesStoreForm = (options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -1580,7 +1661,7 @@ const solicitacoesStoreForm = (options?: RouteQueryOptions): RouteFormDefinition
 
 /**
 * @see \App\Http\Controllers\SolicitacaoController::solicitacoesStore
-* @see app/Http/Controllers/SolicitacaoController.php:45
+* @see app/Http/Controllers/SolicitacaoController.php:56
 * @route '/solicitacoes'
 */
 solicitacoesStoreForm.post = (options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -1592,7 +1673,7 @@ solicitacoesStore.form = solicitacoesStoreForm
 
 /**
 * @see \App\Http\Controllers\SolicitacaoController::solicitacoesUpdate
-* @see app/Http/Controllers/SolicitacaoController.php:69
+* @see app/Http/Controllers/SolicitacaoController.php:80
 * @route '/solicitacoes/{solicitacao}'
 */
 export const solicitacoesUpdate = (args: { solicitacao: number | { id: number } } | [solicitacao: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'put'> => ({
@@ -1607,7 +1688,7 @@ solicitacoesUpdate.definition = {
 
 /**
 * @see \App\Http\Controllers\SolicitacaoController::solicitacoesUpdate
-* @see app/Http/Controllers/SolicitacaoController.php:69
+* @see app/Http/Controllers/SolicitacaoController.php:80
 * @route '/solicitacoes/{solicitacao}'
 */
 solicitacoesUpdate.url = (args: { solicitacao: number | { id: number } } | [solicitacao: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions) => {
@@ -1640,7 +1721,7 @@ solicitacoesUpdate.url = (args: { solicitacao: number | { id: number } } | [soli
 
 /**
 * @see \App\Http\Controllers\SolicitacaoController::solicitacoesUpdate
-* @see app/Http/Controllers/SolicitacaoController.php:69
+* @see app/Http/Controllers/SolicitacaoController.php:80
 * @route '/solicitacoes/{solicitacao}'
 */
 solicitacoesUpdate.put = (args: { solicitacao: number | { id: number } } | [solicitacao: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'put'> => ({
@@ -1650,7 +1731,7 @@ solicitacoesUpdate.put = (args: { solicitacao: number | { id: number } } | [soli
 
 /**
 * @see \App\Http\Controllers\SolicitacaoController::solicitacoesUpdate
-* @see app/Http/Controllers/SolicitacaoController.php:69
+* @see app/Http/Controllers/SolicitacaoController.php:80
 * @route '/solicitacoes/{solicitacao}'
 */
 const solicitacoesUpdateForm = (args: { solicitacao: number | { id: number } } | [solicitacao: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -1665,7 +1746,7 @@ const solicitacoesUpdateForm = (args: { solicitacao: number | { id: number } } |
 
 /**
 * @see \App\Http\Controllers\SolicitacaoController::solicitacoesUpdate
-* @see app/Http/Controllers/SolicitacaoController.php:69
+* @see app/Http/Controllers/SolicitacaoController.php:80
 * @route '/solicitacoes/{solicitacao}'
 */
 solicitacoesUpdateForm.put = (args: { solicitacao: number | { id: number } } | [solicitacao: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -1682,7 +1763,7 @@ solicitacoesUpdate.form = solicitacoesUpdateForm
 
 /**
 * @see \App\Http\Controllers\SolicitacaoController::solicitacoesDestroy
-* @see app/Http/Controllers/SolicitacaoController.php:85
+* @see app/Http/Controllers/SolicitacaoController.php:96
 * @route '/solicitacoes/{solicitacao}'
 */
 export const solicitacoesDestroy = (args: { solicitacao: number | { id: number } } | [solicitacao: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'delete'> => ({
@@ -1697,7 +1778,7 @@ solicitacoesDestroy.definition = {
 
 /**
 * @see \App\Http\Controllers\SolicitacaoController::solicitacoesDestroy
-* @see app/Http/Controllers/SolicitacaoController.php:85
+* @see app/Http/Controllers/SolicitacaoController.php:96
 * @route '/solicitacoes/{solicitacao}'
 */
 solicitacoesDestroy.url = (args: { solicitacao: number | { id: number } } | [solicitacao: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions) => {
@@ -1730,7 +1811,7 @@ solicitacoesDestroy.url = (args: { solicitacao: number | { id: number } } | [sol
 
 /**
 * @see \App\Http\Controllers\SolicitacaoController::solicitacoesDestroy
-* @see app/Http/Controllers/SolicitacaoController.php:85
+* @see app/Http/Controllers/SolicitacaoController.php:96
 * @route '/solicitacoes/{solicitacao}'
 */
 solicitacoesDestroy.delete = (args: { solicitacao: number | { id: number } } | [solicitacao: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'delete'> => ({
@@ -1740,7 +1821,7 @@ solicitacoesDestroy.delete = (args: { solicitacao: number | { id: number } } | [
 
 /**
 * @see \App\Http\Controllers\SolicitacaoController::solicitacoesDestroy
-* @see app/Http/Controllers/SolicitacaoController.php:85
+* @see app/Http/Controllers/SolicitacaoController.php:96
 * @route '/solicitacoes/{solicitacao}'
 */
 const solicitacoesDestroyForm = (args: { solicitacao: number | { id: number } } | [solicitacao: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -1755,7 +1836,7 @@ const solicitacoesDestroyForm = (args: { solicitacao: number | { id: number } } 
 
 /**
 * @see \App\Http\Controllers\SolicitacaoController::solicitacoesDestroy
-* @see app/Http/Controllers/SolicitacaoController.php:85
+* @see app/Http/Controllers/SolicitacaoController.php:96
 * @route '/solicitacoes/{solicitacao}'
 */
 solicitacoesDestroyForm.delete = (args: { solicitacao: number | { id: number } } | [solicitacao: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -1771,7 +1852,7 @@ solicitacoesDestroyForm.delete = (args: { solicitacao: number | { id: number } }
 solicitacoesDestroy.form = solicitacoesDestroyForm
 
 /**
-* @see routes/settings.php:21
+* @see [serialized-closure]:2
 * @route '/settings/appearance'
 */
 export const appearance = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -1785,7 +1866,7 @@ appearance.definition = {
 } satisfies RouteDefinition<["get","head"]>
 
 /**
-* @see routes/settings.php:21
+* @see [serialized-closure]:2
 * @route '/settings/appearance'
 */
 appearance.url = (options?: RouteQueryOptions) => {
@@ -1793,7 +1874,7 @@ appearance.url = (options?: RouteQueryOptions) => {
 }
 
 /**
-* @see routes/settings.php:21
+* @see [serialized-closure]:2
 * @route '/settings/appearance'
 */
 appearance.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -1802,7 +1883,7 @@ appearance.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 })
 
 /**
-* @see routes/settings.php:21
+* @see [serialized-closure]:2
 * @route '/settings/appearance'
 */
 appearance.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -1811,7 +1892,7 @@ appearance.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 })
 
 /**
-* @see routes/settings.php:21
+* @see [serialized-closure]:2
 * @route '/settings/appearance'
 */
 const appearanceForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -1820,7 +1901,7 @@ const appearanceForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'>
 })
 
 /**
-* @see routes/settings.php:21
+* @see [serialized-closure]:2
 * @route '/settings/appearance'
 */
 appearanceForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -1829,7 +1910,7 @@ appearanceForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> =
 })
 
 /**
-* @see routes/settings.php:21
+* @see [serialized-closure]:2
 * @route '/settings/appearance'
 */
 appearanceForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -1846,7 +1927,7 @@ appearance.form = appearanceForm
 
 /**
 * @see \App\Http\Controllers\Auth\RegisteredUserController::register
-* @see app/Http/Controllers/Auth/RegisteredUserController.php:21
+* @see app/Http/Controllers/Auth/RegisteredUserController.php:27
 * @route '/register'
 */
 export const register = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -1861,7 +1942,7 @@ register.definition = {
 
 /**
 * @see \App\Http\Controllers\Auth\RegisteredUserController::register
-* @see app/Http/Controllers/Auth/RegisteredUserController.php:21
+* @see app/Http/Controllers/Auth/RegisteredUserController.php:27
 * @route '/register'
 */
 register.url = (options?: RouteQueryOptions) => {
@@ -1870,7 +1951,7 @@ register.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\Auth\RegisteredUserController::register
-* @see app/Http/Controllers/Auth/RegisteredUserController.php:21
+* @see app/Http/Controllers/Auth/RegisteredUserController.php:27
 * @route '/register'
 */
 register.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -1880,7 +1961,7 @@ register.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 
 /**
 * @see \App\Http\Controllers\Auth\RegisteredUserController::register
-* @see app/Http/Controllers/Auth/RegisteredUserController.php:21
+* @see app/Http/Controllers/Auth/RegisteredUserController.php:27
 * @route '/register'
 */
 register.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -1890,7 +1971,7 @@ register.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
 /**
 * @see \App\Http\Controllers\Auth\RegisteredUserController::register
-* @see app/Http/Controllers/Auth/RegisteredUserController.php:21
+* @see app/Http/Controllers/Auth/RegisteredUserController.php:27
 * @route '/register'
 */
 const registerForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -1900,7 +1981,7 @@ const registerForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> =
 
 /**
 * @see \App\Http\Controllers\Auth\RegisteredUserController::register
-* @see app/Http/Controllers/Auth/RegisteredUserController.php:21
+* @see app/Http/Controllers/Auth/RegisteredUserController.php:27
 * @route '/register'
 */
 registerForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -1910,7 +1991,7 @@ registerForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => 
 
 /**
 * @see \App\Http\Controllers\Auth\RegisteredUserController::register
-* @see app/Http/Controllers/Auth/RegisteredUserController.php:21
+* @see app/Http/Controllers/Auth/RegisteredUserController.php:27
 * @route '/register'
 */
 registerForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
