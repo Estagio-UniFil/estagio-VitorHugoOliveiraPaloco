@@ -2,7 +2,7 @@
 
 ## 🗺 Diagramas
 
-- [🗺 Diagrama de Caso de Uso](docs/diagramas/Diagrama%20de%20Caso%20de%20Uso.pdf)
+- [🗺 Diagrama de Caso de Uso](docs/diagramas/caso-de-uso.pdf)
 - [🗺 Diagrama de Classe](docs/diagramas/Diagrama%20de%20Classe.pdf)
 - [🗺 Diagrama de Entidade-Relacionamento](docs/diagramas/Diagrama%20de%20Entidade-Relacionamento.pdf)
 - [🗺 Diagrama de Implantação](docs/diagramas/Diagrama%20de%20implantacao.pdf)
