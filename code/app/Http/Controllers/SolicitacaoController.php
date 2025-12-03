@@ -86,7 +86,8 @@ class SolicitacaoController extends Controller
         }
 
         $solicitacao->update([
-            'status' => $input['status']
+            'status' => $input['status'],
+            'descricao' => $input['descricao']
         ]);
 
         return redirect()->back()->with('success');   

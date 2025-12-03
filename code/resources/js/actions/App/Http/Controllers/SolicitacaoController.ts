@@ -228,7 +228,7 @@ update.form = updateForm
 
 /**
 * @see \App\Http\Controllers\SolicitacaoController::destroy
-* @see app/Http/Controllers/SolicitacaoController.php:96
+* @see app/Http/Controllers/SolicitacaoController.php:97
 * @route '/solicitacoes/{solicitacao}'
 */
 export const destroy = (args: { solicitacao: number | { id: number } } | [solicitacao: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'delete'> => ({
@@ -243,7 +243,7 @@ destroy.definition = {
 
 /**
 * @see \App\Http\Controllers\SolicitacaoController::destroy
-* @see app/Http/Controllers/SolicitacaoController.php:96
+* @see app/Http/Controllers/SolicitacaoController.php:97
 * @route '/solicitacoes/{solicitacao}'
 */
 destroy.url = (args: { solicitacao: number | { id: number } } | [solicitacao: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions) => {
@@ -276,7 +276,7 @@ destroy.url = (args: { solicitacao: number | { id: number } } | [solicitacao: nu
 
 /**
 * @see \App\Http\Controllers\SolicitacaoController::destroy
-* @see app/Http/Controllers/SolicitacaoController.php:96
+* @see app/Http/Controllers/SolicitacaoController.php:97
 * @route '/solicitacoes/{solicitacao}'
 */
 destroy.delete = (args: { solicitacao: number | { id: number } } | [solicitacao: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'delete'> => ({
@@ -286,7 +286,7 @@ destroy.delete = (args: { solicitacao: number | { id: number } } | [solicitacao:
 
 /**
 * @see \App\Http\Controllers\SolicitacaoController::destroy
-* @see app/Http/Controllers/SolicitacaoController.php:96
+* @see app/Http/Controllers/SolicitacaoController.php:97
 * @route '/solicitacoes/{solicitacao}'
 */
 const destroyForm = (args: { solicitacao: number | { id: number } } | [solicitacao: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -301,7 +301,7 @@ const destroyForm = (args: { solicitacao: number | { id: number } } | [solicitac
 
 /**
 * @see \App\Http\Controllers\SolicitacaoController::destroy
-* @see app/Http/Controllers/SolicitacaoController.php:96
+* @see app/Http/Controllers/SolicitacaoController.php:97
 * @route '/solicitacoes/{solicitacao}'
 */
 destroyForm.delete = (args: { solicitacao: number | { id: number } } | [solicitacao: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
