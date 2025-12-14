@@ -3,7 +3,7 @@
 Este projeto é uma aplicação web desenvolvida utilizando **Laravel** no backend e **Vue.js** no frontend.  
 O objetivo é permitir que qualquer pessoa consiga clonar o repositório e rodar o projeto localmente para testes e estudos.
 
-## Requirements
+## Requisitos
 
 Antes de iniciar, certifique-se de ter instalado em sua máquina:
 
